@@ -1,0 +1,18 @@
+<div>
+<!--  <app-create-person  (personAdded)="notifyCreatePerson($event)" *ngIf="showComponent" ></app-create-person>-->
+   <div class="container">
+    <div class="row">
+<!--      list of products-->
+      <div class="col-sm">
+        <app-view-product-list ></app-view-product-list>
+      </div>
+<!--      shopping cart items-->
+      <div class="col-sm">
+        <app-list-purchase (afterCheckout)="onCheckouts($event)" ></app-list-purchase>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
