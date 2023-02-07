@@ -1,0 +1,99 @@
+<div class="container-fluid" dir="rtl">
+  <form [formGroup]="productGroupForm">
+        <div class="row g-3">
+          <div class="col-sm-4">
+            <label for="code" class="form-label">کد محصول</label>
+            <input type="number" class="form-control" id="code" placeholder="" formControlName="code" [(ngModel)]="_productModel.code">
+            <div class="invalid-feedback">
+              کد محصول صحیح نیست.
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <label for="name" class="form-label">نام محصول </label>
+            <input type="text" class="form-control" id="name" formControlName="name" [(ngModel)]="_productModel.name">
+            <div class="invalid-feedback">
+              نام درست وارد نشده
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <label for="price" class="form-label">قیمت فروش</label>
+            <input type="number" class="form-control" id="price" formControlName="price" [(ngModel)]="_productModel.price">
+            <div class="invalid-feedback">
+              قیمت درست وارد نشده
+            </div>
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-sm-4">
+            <label for="quantityInStock" class="form-label">موجودی </label>
+            <input type="number" class="form-control" id="quantityInStock" formControlName="quantityInStock" [(ngModel)]="_productModel.quantityInStock">
+            <div class="invalid-feedback">
+              موجودی انبار مشخص نشده
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <label for="vendor" class="form-label">تولید کننده</label>
+            <input type="text" class="form-control" id="vendor" formControlName="vendor" [(ngModel)]="_productModel.vendor">
+            <div class="invalid-feedback">
+              آدرس درست وارد نشده
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <label for="createdate" class="form-label">تاریخ </label>
+            <input type="number" class="form-control" id="createdate" formControlName="createdate" [(ngModel)]="_productModel.createdate">
+            <div class="invalid-feedback">
+              آدرس درست وارد نشده
+            </div>
+          </div>
+
+        </div>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label for="ename" class="form-label">نام لاتین </label>
+            <input type="text" class="form-control" id="ename" formControlName="ename" [(ngModel)]="_productModel.ename">
+            <div class="invalid-feedback">
+              آدرس درست وارد نشده
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label for="description" class="form-label">شرح محصول </label>
+            <textarea class="form-control" id="description" formControlName="description" [(ngModel)]="_productModel.description"></textarea>
+            <div class="invalid-feedback">
+              شرح محصول
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-sm-4">
+            <label for="enabled" class="form-label">فعال شدن </label>
+            <input class="form-check-input" type="checkbox"  id="enabled"   required [(ngModel)]="_productModel.enabled" [ngModelOptions]="{standalone: true}" >
+            <div class="invalid-feedback">
+              آدرس درست وارد نشده
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-auto">
+            <p for="imgUrl" class="form-label">بارگزاری تصویر </p>
+            <img [src]="_productModel.imgUrl" class="card-img-top" alt="..." style="width: 50%" >
+            <input class="form-control" type="text" id="imgUrl" formControlName="imgUrl" [(ngModel)]="_productModel.imgUrl">
+            <div class="invalid-feedback">
+              تصویر محصول
+            </div>
+          </div>
+        </div>
+    <hr class="my-4">
+
+  </form>
+
+</div>
+<div class="modal-footer">
+  <button  type="button"  class="btn btn-primary" (click)="updateProduct()" data-bs-dismiss="modal">ویرایش محصول جدید</button>
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+  <div *ngIf="success" class=" col-sm-6 alert alert-success alert-dismissible" >
+    <strong>انجام شد</strong>
+    <p>محصول با موفقیت در سیستم تعریف شد</p>
+  </div>
+</div>

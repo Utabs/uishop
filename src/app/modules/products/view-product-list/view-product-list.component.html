@@ -1,0 +1,23 @@
+<!--{{personBaskets.data.userName + "کدکاربری: " + personBaskets.data.id + "کاربر شناسه:"}}-->
+<p>جستجو کالا</p>
+<div class="search-hero">
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="نام کالا">
+</div>
+
+<div *ngFor="let product of productList| filter:searchText;let idx=index " class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{product.name}}</h5>
+    <p class="card-text">{{product.description}}</p>
+  </div>
+
+  <ul class="list-group list-group-flush">
+     <li class="list-group-item">{{product.code}} | {{product.price1|number}}  | {{product.vendor}}</li>
+   </ul>
+  <div class="card-body row">
+    <button class="btn btn-primary" (click)="addToCart(product)">افزودن</button>
+    <input type="number" step="5"/>
+  </div>
+
+</div>
+
+
