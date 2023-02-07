@@ -1,1 +1,46 @@
-<p>view-branch works!</p>
+<div class="col-sm-5" >
+  <label for="codebranch" class="form-label">کد شعبه</label>
+  <input type="number" class="form-control" id="codebranch" placeholder="کد" disabled  value="{{_branchModel.branchCode}}">
+  <div class="invalid-feedback">
+    شماره تلفن صحیح نیست
+  </div>
+</div>
+<div class="row g-3">
+  <div class="col-sm-6">
+    <label class="form-label">نام شعبه </label>
+    <input type="text" class="form-control"    disabled value="{{_branchModel.branchName}}">
+    <div class="invalid-feedback">
+      نام درست وارد نشده
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <label for="degree" class="form-label">درجه شعبه</label>
+    <input type="number" class="form-control" id="degree"    disabled value="{{_branchModel.degree}}">
+    <div class="invalid-feedback">
+      نام خانوادگی درست وارد نشده
+    </div>
+  </div>
+  <div class="col-12">
+    <label for="supbranch" class="form-label">شعبه سرپرست</label>
+    <input type="number" class="form-control" id="supbranch"   disabled value="{{_branchModel.supBranch}}">
+    <div class="invalid-feedback">
+      آدرس درست وارد نشده
+    </div>
+  </div>
+
+  <div class="col-12">
+    <label for="opendate" class="form-label">تاریخ </label>
+    <input type="number" class="form-control" id="opendate"   disabled  value="{{_branchModel.activeDate}}">
+    <div class="invalid-feedback">
+      آدرس درست وارد نشده
+    </div>
+  </div>
+
+  <div class="col-12">
+    <label for="active" class="form-label">فعال شدن </label>
+    <input class="form-check-input" type="checkbox"  id="active"  disabled  [checked]="_branchModel.active">
+    <div class="invalid-feedback">
+      آدرس درست وارد نشده
+    </div>
+  </div>
+</div>

@@ -1,1 +1,8 @@
-<p>delete-branch works!</p>
+<div class="modal-body">
+  <h4>ایا از حذف شعبه  {{_branchModel.branchName}}  کد   {{_branchModel.branchCode}} اطمینان داری</h4>
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+  <button type="button" class="btn btn-danger" (click)="deleteBranch(_branchModel.id)">خذف</button>
+</div>

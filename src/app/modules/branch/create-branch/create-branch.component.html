@@ -1,1 +1,74 @@
-<p>create-branch works!</p>
+<div class="container-fluid" dir="rtl">
+  <form [formGroup]="branchGroupForm">
+    <div class="row g-3">
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">فرم اضافه کردن شعبه</h4>
+        <hr/>
+
+        <div *ngIf="success" class="alert alert-success alert-dismissible">
+          <strong>انجام شد</strong>
+          <p>شعبه با موفقیت در سیستم تعریف شد</p>
+        </div>
+
+
+        <div class="col-sm-5">
+          <label for="codebranch" class="form-label">کد شعبه</label>
+          <input type="number" class="form-control" id="codebranch" name="first" placeholder="کد" required
+                 formControlName="branchCode">
+          <div class="invalid-feedback">
+            شماره تلفن صحیح نیست
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label class="form-label">نام شعبه </label>
+            <input type="text" class="form-control" name="namebranch" required formControlName="branchName">
+            <div class="invalid-feedback">
+              نام درست وارد نشده
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label for="degree" class="form-label">درجه شعبه</label>
+            <input type="number" class="form-control" id="degree" name="first3" placeholder="" required
+                   formControlName="degree">
+            <div class="invalid-feedback">
+              نام خانوادگی درست وارد نشده
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="supbranch" class="form-label">شعبه سرپرست</label>
+            <input type="number" class="form-control" id="supbranch" name="first4" placeholder="سرپرست" required
+                   formControlName="supBranch">
+            <div class="invalid-feedback">
+              آدرس درست وارد نشده
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label for="opendate" class="form-label">تاریخ </label>
+            <input type="number" class="form-control" id="opendate" name="first4" placeholder="تاریخ" required
+                   formControlName="activeDate">
+            <div class="invalid-feedback">
+              آدرس درست وارد نشده
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label for="active" class="form-label">فعال شدن </label>
+            <input class="form-check-input" type="checkbox" value="" id="active" required formControlName="active">
+            <div class="invalid-feedback">
+              آدرس درست وارد نشده
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="row justify-content-sm-end">
+      <button class="w-50 btn btn-primary btn-lg" (click)="addBranch()">ثبت شعبه جدید</button>
+    </div>
+  </form>
+</div>
