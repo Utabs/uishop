@@ -1,0 +1,19 @@
+
+<app-create-person (registeredPerson)="onRegisteredPerson($event)" *ngIf="!registered"> </app-create-person>
+<app-view-person  *ngIf="registered"></app-view-person>
+<!--<app-create-person *ngIf="false"></app-create-person>-->
+<app-create-purchase (logoutPerson)="OnCheckOut($event)"> </app-create-purchase>
+
+
+
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm">-->
+<!--      <app-create-purchase></app-create-purchase>-->
+<!--    </div>-->
+<!--    <div class="col-sm">-->
+<!--      <app-list-purchase></app-list-purchase>-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--</div>-->
