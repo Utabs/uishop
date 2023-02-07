@@ -1,2 +1,42 @@
-<p>Root Component</p>
-<router-outlet></router-outlet>
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar-->
+  <div class="border-end bg-white" id="sidebar-wrapper">
+    <div class="sidebar-heading border-bottom bg-light">StartMenu</div>
+    <div class="list-group list-group-flush">
+      <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
+      <a routerLinkActive="active" routerLink="/branch" class="list-group-item list-group-item-action list-group-item-light p-3">
+        <i class="fa fa-fw fa-th mr-1"></i><span>شعب</span>
+      </a>
+      <a routerLinkActive="active" routerLink="/customer" class="list-group-item list-group-item-action list-group-item-light p-3" >
+        <i class="fa fa-fw fa-tr mr-1"></i>
+        مشتریان
+      </a>
+      <a routerLinkActive="active" routerLink="/products" class="list-group-item list-group-item-action list-group-item-light p-3" >محصولات</a>
+      <a routerLinkActive="active" routerLink="/basket" class="list-group-item list-group-item-action list-group-item-light p-3"  >فاکتور فروش </a>
+      <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
+    </div>
+  </div>
+  <!-- Page content wrapper-->
+  <div id="page-content-wrapper">
+    <!-- Top navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container-fluid">
+        <div class="ic ic-hamburger" id="sidebarToggle">menu</div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+            <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Page content-->
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+
