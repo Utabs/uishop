@@ -74,6 +74,8 @@ export class PersonService implements OnInit{
     queryParams = queryParams.append("username", personCode);
     return this.apiService.get("/api/person/", queryParams)
   }
-
+  getAllPersons() {
+    return this.apiService.get("/api/person")
+  }
 
 }

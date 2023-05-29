@@ -13,6 +13,7 @@ import {AppConfig} from "./AppConfig";
 import { PersonComponent } from './modules/person/person.component';
 import { OrderComponent } from './modules/order/order.component';
 import { OrderItemsComponent } from './modules/order/order-items/order-items.component';
+import {PersonModule} from "./modules/person/person.module";
 
 @NgModule({
   declarations: [
@@ -21,16 +22,17 @@ import { OrderItemsComponent } from './modules/order/order-items/order-items.com
     OrderComponent,
     OrderItemsComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule,
-    NgbModule,
-    HttpClientModule,
-    FormsModule,
-    BrowserModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        RouterModule,
+        NgbModule,
+        HttpClientModule,
+        FormsModule,
+        BrowserModule,
+        ReactiveFormsModule,
+        PersonModule
+    ],
   providers: [BranchService, AppConfig],
   bootstrap: [AppComponent]
 })
